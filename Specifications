@@ -1,0 +1,16 @@
+Overall goal of project: allow a Wemoas D1 Mini ( https://wiki.wemos.cc/products:d1:d1_mini ) to control solenoids, relays and other small DC loads ad providing a "hackerspace proof" set of inputs and outputs while operating off a single DC supply rail.
+
+Specifications:
+
+Power input voltage: 6-36V DC
+Power input current: 200ma-10A DC (minimumTBD by testing.  Additional current required for high side/source and push/pull drivers, up to about ~10A
+
+Analog inputs: 1, moderately protected, voltage divided in half with 5V reference and ground available.  The divided signal should allow 0-5V signals to be fed to the module without exceeding its maximum ratings.
+
+"Sink" (open drain) outputs: 4, provided by ON Semiconductor NCP8403 protected driver (up to 15A @ 42V)
+
+"Source" outputs: 2, provided by Infineon BTS5045-1EJA protected driver (up to 28V @ 4A)
+
+Push-pull output (aka FET gate driver): 1, provided by (??) ZXGD3009E6 MOSFET driver
+
+All parts are designed to be reasonable to deal with i.e. no BGA, QFN.  Power pads (BTS5045) unfortunately must be soldered.  Deal with it.
